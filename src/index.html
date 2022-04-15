@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="module" src="scripts/app.js"></script>
+</head>
+<body>
+<nav id="menu">
+    <button id="btnMM" class="pure-button">Main Menu</button>
+    <div id="programPanel"></div>
+    <button id="btnUp" class="pure-button control-btns">
+        <img src="images/arrow-up.svg">
+    </button>
+    <button id="btnLeft" class="pure-button control-btns">
+        <img src="images/arrow-left.svg">
+    </button>
+    <button id="btnRight" class="pure-button control-btns">
+        <img src="images/arrow-right.svg">
+    </button>
+    <button id="btnDown" class="pure-button control-btns">
+        <img src="images/arrow-down.svg">
+    </button>
+    <div id="custom-control">
+        <button id="btnRemoveLast" class="pure-button control-btns">RL</button>
+    </div>
+    <div id="stageMenu">
+        <button id="btnBuildLevel" class="pure-button">Build Level</button>
+        <button id="btnPutCheese" class="pure-button">Put Cheese</button>
+        <button id="btnPutMouse" class="pure-button">Put Mouse</button>
+        <button id="btnPlay" class="pure-button">Play</button>
+        <button id="btnReset" class="pure-button">Reset</button>
+        <button id="btnGo" class="pure-button">Go</button>
+    </div>
+    <img src="images/mouse1.png">
+</nav>
+<div class="mapContainer">
+    <div id="map">
+        <!-- will be generated -->
+    </div>
+    <div id="movingArea">
+        <img id="cheese" src="images/cheese.png">
+        <img id="mouse" src="images/mouse.png">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+@import "npm:purecss";
+
+body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr;
+    grid-template-rows: auto 30px auto 1fr 50px auto auto auto 50px auto 50px 1fr auto;
+    grid-gap: 3px;
+    align-items: center;
+    padding: 10px;
+    max-width: 200px;
+}
+
+#menu > #btnMM {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+#menu > #programPanel {
+    min-height: 72px;
+    border: solid 1px dimgray;
+    display: flex;
+    flex-direction: row;
+    justify-items: left;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row: 3;
+}
+
+#menu > #btnUp {
+    grid-row: 6;
+    grid-column: 3;
+}
+
+#menu > #btnLeft {
+    grid-row: 7;
+    grid-column: 2;
+}
+
+#menu > #btnRight {
+    grid-row: 7;
+    grid-column: 4;
+}
+
+#menu > #btnDown {
+    grid-row: 8;
+    grid-column: 3;
+}
+
+#menu > #custom-control {
+    grid-row: 10;
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 3px;
+}
+
+#menu > #stageMenu {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row: 13;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#menu > img {
+    grid-row: 6 / 11;
+    grid-column: 1 / 6;
+    z-index: -1;
+    margin-top: -120px;
+    max-width: 200px;
+}
+
+.mapContainer {
+    justify-self: center;
+    align-self: center;
+    width: 90vh;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mapContainer > #map {
+    grid-row: 1;
+    grid-column: 1;
+    border: solid 5px deeppink;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#map > .cell {
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+#map > .land {
+    background: green;
+}
+
+#map > .rb {
+    border-right: solid 5px deeppink;
+}
+
+#map > .bb {
+    border-bottom: solid 5px deeppink;
+}
+
+.mapContainer > #movingArea {
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 100;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#movingArea {
+    position: relative;
+}
+
+#movingArea > img {
+    position: absolute;
+    max-width: 9vh;
+    max-height: 9vh;
+    margin-top: -4.5vh;
+    margin-left: -4.5vh;
+}
